@@ -1,41 +1,40 @@
 // Mixins
 
 @mixin font($font_name, $file_name, $weight, $style) {
-    @font-face {
-        font-family: $font_name;
-        font-style: $style;
-        font-weight: $weight;
-        font-display: swap;
-        src:
-            url("../fonts/#{$file_name}.woff2") format("woff2"),
-            url("../fonts/#{$file_name}.woff") format("woff");
-    }
+  @font-face {
+    font-family: $font_name;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+      url("../fonts/#{$file_name}.woff") format("woff");
+  }
 }
 
 @mixin general-font-family() {
-    font-family: "Neo Sans Pro", "Arial", sans-serif;
-    font-weight: 400;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
 }
 
 @mixin general-font() {
-    @include general-font-family();
-    font-size: 20px;
-    color: $text_color;
-    letter-spacing: normal;
+  @include general-font-family();
+  font-size: 16px;
+  color: $text_color;
+  letter-spacing: normal;
 }
 
 @mixin flex-center() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin after() {
-    position: absolute;
-    top: 50%;
-    right: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
 
-    content: "";
+  content: "";
 
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 }

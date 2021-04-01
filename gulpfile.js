@@ -75,23 +75,23 @@ gulp.task("refresh", function (done) {
 // Копирование файлов в build
 gulp.task("copy", function () {
     return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/js/**/*.js",
-      "source/*.ico",
-      "source/css/normalize.css",
-      "source/pixel-glass/**/*.*"
+        "source/fonts/**/*.{woff,woff2}",
+        "source/js/**/*.js",
+        "source/*.ico",
+        "source/css/normalize.css",
+        "source/pixel-glass/**/*.*"
 
     ], {
-      base: "source"
+        base: "source"
     })
-    .pipe(gulp.dest("build"));
+        .pipe(gulp.dest("build"));
 });
 
 // Copies html files to the build directory
 gulp.task("html", function () {
     return gulp.src(path.src.html)
-    .pipe(fileInclude())
-    .pipe(gulp.dest(path.dest.html));
+        .pipe(fileInclude())
+        .pipe(gulp.dest(path.dest.html));
 });
 
 // Deletes the build directory
@@ -102,47 +102,47 @@ gulp.task("clean", function () {
 // Converts SCSS to CSS
 gulp.task("scssToCss", function () {
     return gulp.src(path.src.scss)
-      .pipe(plumber())
-      .pipe(sourcemap.init())
-      .pipe(sass())
-      .pipe(postcss([
-        autoprefixer()
-      ]))
-      .pipe(sourcemap.write("."))
-      .pipe(gulp.dest(path.dest.css))
-      .pipe(server.stream());
-  });
+        .pipe(plumber())
+        .pipe(sourcemap.init())
+        .pipe(sass())
+        .pipe(postcss([
+            autoprefixer()
+        ]))
+        .pipe(sourcemap.write("."))
+        .pipe(gulp.dest(path.dest.css))
+        .pipe(server.stream());
+});
 
 // Сжатие картинок
 gulp.task("images", function () {
     return gulp.src([
-      "source/img/**/*.{png,jpg,svg,webp}",
-      "!source/img/models/**/*.*"
+        "source/img/**/*.{png,jpg,svg,webp}",
+        //"!source/img/models/**/*.*"
     ])
-    // .pipe(imagemin([
-    //   imagemin.optipng({optimizationLevel: 3}),
-    //   imagemin.mozjpeg({quality: 75, progressive: true}),
-    //   imagemin.svgo()
-    // ]))
-    .pipe(gulp.dest("build/img"));
-  });
+        // .pipe(imagemin([
+        //   imagemin.optipng({optimizationLevel: 3}),
+        //   imagemin.mozjpeg({quality: 75, progressive: true}),
+        //   imagemin.svgo()
+        // ]))
+        .pipe(gulp.dest("build/img"));
+});
 
-  // Создание SVG спрайта
+// Создание SVG спрайта
 gulp.task("sprite", function () {
     return gulp.src("build/img/icon-*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-  });
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename("sprite.svg"))
+        .pipe(gulp.dest("build/img"));
+});
 
-  // Преобразование в webp
+// Преобразование в webp
 gulp.task("webp", function () {
     return gulp.src("source/img/content/**/*.{png,jpg}")
-      .pipe(webp({quality: 90}))
-      .pipe(gulp.dest("source/img/content"));
-  });
+        .pipe(webp({ quality: 90 }))
+        .pipe(gulp.dest("source/img/content"));
+});
 
 
 gulp.task("start", gulp.series("clean", "copy", "html", "scssToCss", "images", "sprite", "server"));

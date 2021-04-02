@@ -1,0 +1,32 @@
+/* -- HEADER -- */
+.burger {
+  @media (min-width: $desktop_width) {
+    display: none;
+  }
+
+  height: 18px;
+  width: 25px;
+
+  border-style: none;
+
+  cursor: pointer;
+
+  background-repeat: no-repeat;
+
+  background-image: url("../img/burger.svg");
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active {
+    opacity: $active_opacity;
+  }
+
+  transition: $standart_transition;
+
+  &--white {
+    background-image: url("../img/burger_white.svg");
+    background-color: $mobile_nav_bg;
+  }
+}

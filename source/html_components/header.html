@@ -1,13 +1,28 @@
 <!-- ШАПКА -->
 <header class="header">
-  <div class="container">
+  <!-- HEADER TOP -->
+  <div class="header__top">
+    <!-- Burger -->
+    <button class="header__burger burger" type="button">
+      <span class="visually-hidden">Меню</span>
+    </button>
+
     <!-- LOGO -->
     <a class="header__logo">
-      <img src="img/logo.svg" alt="Page Logo" width="66" height="66">
+      <!-- <img src="img/logo.svg" alt="Page Logo" width="66" height="66"> -->
+      <svg width="66" height="66" aria-label="Page Logo">
+        <use href="img/sprite.svg#icon-logo" />
+      </svg>
     </a>
+    <!-- Cart -->
+    <button class="header__cart" type="button">
+      <span class="visually-hidden">Cart</span>
+    </button>
+  </div>
 
+  <div class="container header__inner">
     <!-- HEADER NAV -->
-    <div class="header__nav">
+    <div class="header__nav header__nav--hidden header__nav--fullscreen">
       <!-- SEARCH -->
       <div class="header__search-form">
         <form action="/" method="get">

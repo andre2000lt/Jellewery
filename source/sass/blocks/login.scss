@@ -1,0 +1,33 @@
+/* -- LOG IN -- */
+.login__inner {
+  width: 430px;
+  height: 586px;
+
+  padding: 160px 45px 45px 45px;
+
+  background: #f0eae4 url("../img/login_bg_1x.jpg") no-repeat left top;
+  background-size: 430px 138px;
+  box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
+}
+
+.login h2 {
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+
+  text-align: center;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #1d1613;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: #9b9997;
+
+  background-color: transparent;
+}

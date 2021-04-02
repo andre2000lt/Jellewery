@@ -11,7 +11,7 @@
   <style>
     html {
       /* Mobile layout by default */
-      background-image: url("img/models/320.png");
+      background-image: url("img/models/320.jpg");
       background-repeat: no-repeat;
       background-position: 50% 0;
     }
@@ -20,7 +20,7 @@
     @media (min-width: 768px) {
       html {
         /* Tablet layout */
-        background-image: url("img/models/768_menu.jpg");
+        background-image: url("img/models/768.jpg");
       }
     }
 
@@ -29,7 +29,8 @@
       html {
         /* Desktop layout */
         /* padding-top: 15px; */
-        background-image: url("img/models/1366.jpg");
+        /* background-image: url("img/models/1366.jpg"); */
+        background-image: url("img/models/1366_login.jpg");
       }
     }
   </style>
@@ -41,14 +42,29 @@
 <body>
   <!-- ШАПКА -->
 <header class="header">
-  <div class="container">
+  <!-- HEADER TOP -->
+  <div class="header__top">
+    <!-- Burger -->
+    <button class="header__burger burger" type="button">
+      <span class="visually-hidden">Меню</span>
+    </button>
+
     <!-- LOGO -->
     <a class="header__logo">
-      <img src="img/logo.svg" alt="Page Logo" width="66" height="66">
+      <!-- <img src="img/logo.svg" alt="Page Logo" width="66" height="66"> -->
+      <svg width="66" height="66" aria-label="Page Logo">
+        <use href="img/sprite.svg#icon-logo" />
+      </svg>
     </a>
+    <!-- Cart -->
+    <button class="header__cart" type="button">
+      <span class="visually-hidden">Cart</span>
+    </button>
+  </div>
 
+  <div class="container header__inner">
     <!-- HEADER NAV -->
-    <div class="header__nav">
+    <div class="header__nav header__nav--hidden header__nav--fullscreen">
       <!-- SEARCH -->
       <div class="header__search-form">
         <form action="/" method="get">
@@ -117,6 +133,38 @@
 
 </html>
 
+  <!-- Login -->
+  <div class="login modal modal--active js-close-window" id="modal1">
+    <div class="login__inner">
+      <h2>Log In</h2>
+      <div class="login__form">
+        <form action="/" method="post">
+          <label class="visually-hidden" for="email">Input your email</label>
+          <input type="email" name="email" id="email" placeholder="Your E-mail" data-local-stor="email"
+            autocomplete="off" required>
+
+          <label class="visually-hidden" for="pass">Введите пароль</label>
+          <!-- data-pass-pattern - 'lengthReq, bigLettersReq, digitsReq, specialsReq' -->
+          <input type="password" name="pass" id="pass" placeholder="Your E-mail" data-pass-pattern="6,1,1,0"
+            autocomplete="off" required>
+          <p>
+            <a href="#">Forgot your password?</a>
+          </p>
+
+          <button type="submit">Log in</button>
+        </form>
+
+        <div class=login__signup>
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+
+        <button class="button js-close-window">close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/burger.js"></script>
 </body>
 
 </html>

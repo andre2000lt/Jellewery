@@ -1,9 +1,11 @@
 /* -- LOG IN -- */
 .login__inner {
+  position: relative;
+
   width: 430px;
   height: 586px;
 
-  padding: 160px 45px 45px 45px;
+  padding: 190px 45px 45px 45px;
 
   background: #f0eae4 url("../img/login_bg_1x.jpg") no-repeat left top;
   background-size: 430px 138px;
@@ -11,6 +13,9 @@
 }
 
 .login h2 {
+  margin: 0;
+  margin-bottom: 29px;
+
   font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-weight: 700;
   font-size: 34px;
@@ -22,12 +27,91 @@
 .login input[type="email"],
 .login input[type="password"] {
   width: 100%;
+  padding: 4px 0;
+
   border: none;
   border-bottom: 1px solid #1d1613;
 
   font-size: 14px;
   line-height: 21px;
-  color: #9b9997;
+  color: $hint_color;
 
   background-color: transparent;
 }
+
+.login input[type="email"] {
+  margin-bottom: 35px;
+}
+
+.login input[type="password"] {
+  margin-bottom: 8px;
+}
+
+.login__forgot-pass {
+  margin: 0;
+  margin-bottom: 42px;
+
+  text-align: right;
+}
+
+.login__forgot-pass a {
+  font-size: 12px;
+  line-height: 18px;
+  color: $hint_color;
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active,
+  &:focus {
+    opacity: $active_opacity;
+    text-decoration: underline;
+  }
+
+  transition: $standart_transition;
+}
+
+.login button[type="submit"] {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.login__signup {
+  display: flex;
+  justify-content: center;
+
+  margin-left: -7px;
+}
+
+.login__signup p {
+  margin: 0;
+  margin-right: 7px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: $hint_color;
+}
+
+.login__signup a {
+  font-size: 14px;
+  line-height: 21px;
+  color: #1d1613;
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active,
+  &:focus {
+    opacity: $active_opacity;
+    text-decoration: underline;
+  }
+}
+
+.login__close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+

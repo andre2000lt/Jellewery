@@ -64,7 +64,7 @@
 
   <div class="container header__inner">
     <!-- HEADER NAV -->
-    <div class="header__nav header__nav--hidden header__nav--fullscreen">
+    <div class="header__nav">
       <!-- SEARCH -->
       <div class="header__search-form">
         <form action="/" method="get">
@@ -76,7 +76,7 @@
       <!-- USER MENU -->
       <ul class="header__user-menu">
         <li>
-          <a href="#">Login</a>
+          <a href="#" class="js-open-window" data-modal-id="modal-login">Login</a>
         </li>
         <li>
           <a href="#">Cart <span>0</span> </a>
@@ -134,7 +134,7 @@
 </html>
 
   <!-- Login -->
-  <div class="login modal modal--active js-close-window" id="modal1">
+  <div class="login modal js-close-window" id="modal-login">
     <div class="login__inner">
       <h2>Log In</h2>
       <div class="login__form">
@@ -145,13 +145,13 @@
 
           <label class="visually-hidden" for="pass">Введите пароль</label>
           <!-- data-pass-pattern - 'lengthReq, bigLettersReq, digitsReq, specialsReq' -->
-          <input type="password" name="pass" id="pass" placeholder="Your E-mail" data-pass-pattern="6,1,1,0"
+          <input type="password" name="pass" id="pass" placeholder="Password" data-pass-pattern="6,1,1,0"
             autocomplete="off" required>
-          <p>
+          <p class="login__forgot-pass">
             <a href="#">Forgot your password?</a>
           </p>
 
-          <button type="submit">Log in</button>
+          <button class="brown-button" type="submit">Log in</button>
         </form>
 
         <div class=login__signup>
@@ -159,12 +159,15 @@
           <a href="#">Sign up</a>
         </div>
 
-        <button class="button js-close-window">close</button>
+        <button class="login__close-button close-button js-close-window"><span class="visually-hidden">close</span></button>
       </div>
     </div>
   </div>
 
   <script src="js/burger.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/localStorage.js"></script>
 </body>
 
 </html>

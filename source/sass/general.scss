@@ -37,3 +37,7 @@ body {
 .nowrap {
   white-space: nowrap;
 }
+
+.invalid-field {
+  box-shadow: 0 0 2px 2px red;
+}

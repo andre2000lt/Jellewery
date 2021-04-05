@@ -3,6 +3,16 @@
   position: relative;
 
   min-height: 176px;
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    min-height: 126px;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    min-height: 92px;
+  }
 }
 
 .header__top {

@@ -1,0 +1,86 @@
+.new-in {
+  margin-bottom: 100px;
+}
+
+.new-in__title {
+  margin-bottom: 25px;
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    margin-bottom: 20px;
+  }
+}
+
+// .new-in__slider
+
+.new-in__shop-link {
+  margin: 0;
+  margin-bottom: 60px;
+
+  text-align: center;
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    margin-bottom: 55px;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    margin-bottom: 45px;
+  }
+}
+
+.new-in__shop-link a {
+  font-size: 16px;
+  line-height: 130%;
+  color: $text_color;
+
+  border-bottom: 1px solid #a87b62;
+}
+
+.new-in__products {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.new-in__products img {
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    width: 100%;
+  }
+}
+
+.new-in__product-title span {
+  display: block;
+
+  text-align: center;
+
+  &:first-child {
+    font-size: 16px;
+    line-height: 130%;
+
+    margin-bottom: 5px;
+  }
+
+  &:last-child {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+
+// .boxes__button
+
+// .boxes__button--next
+
+// .swiper-button
+
+// .swiper-button--right
+
+// .boxes__button--prev
+
+// .swiper-button--left

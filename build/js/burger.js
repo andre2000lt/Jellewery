@@ -8,8 +8,8 @@
   var headerTop = document.querySelector('.header__top');
 
   if (burger && headerNav) {
-    // headerNav.classList.add('header__nav--hidden');
-    // headerNav.classList.add('header__nav--fullscreen');
+    headerNav.classList.add('header__nav--hidden');
+    headerNav.classList.add('header__nav--fullscreen');
 
     burger.addEventListener('click', function () {
       headerNav.classList.toggle('header__nav--hidden');
@@ -30,5 +30,3 @@
     });
   }
 })();
-
-

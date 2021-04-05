@@ -119,7 +119,6 @@
   };
 
   var fields = document.querySelectorAll('[required]');
-  console.log(fields);
 
   fields.forEach(function (field) {
     // Проверяем поля паролей c атрибутом 'data-pass-pattern'

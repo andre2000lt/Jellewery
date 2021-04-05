@@ -66,7 +66,7 @@ gulp.task("server", function () {
     gulp.watch(path.watch.html, gulp.series("html", "refresh"));
 });
 
-// Refreshes the server  
+// Refreshes the server
 gulp.task("refresh", function (done) {
     server.reload();
     done();
@@ -77,8 +77,9 @@ gulp.task("copy", function () {
     return gulp.src([
         "source/fonts/**/*.{woff,woff2}",
         "source/js/**/*.js",
+        "source/libs/**/*.js",
         "source/*.ico",
-        "source/css/normalize.css",
+        "source/css/*.css",
         "source/pixel-glass/**/*.*"
 
     ], {

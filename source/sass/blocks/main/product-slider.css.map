@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,0BAA0B",
+    "sources": [
+        "product-slider.scss"
+    ],
+    "names": [],
+    "file": "product-slider.css"
+}

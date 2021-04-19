@@ -59,9 +59,13 @@
 
   font-size: 14px;
   line-height: 21px;
-  color: $hint_color;
+  color: $text_color;
 
   background-color: transparent;
+
+  &::placeholder {
+    color: $hint_color;
+  }
 
   /* -- MOBILE -- */
   @media (max-width: $mobile_max_width) {

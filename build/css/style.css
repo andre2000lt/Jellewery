@@ -166,7 +166,14 @@ body {
   color: #ffffff;
   text-align: center;
   background-color: #a87b62;
-  border: none; }
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .brown-button:hover {
+    opacity: 0.7; }
+  .brown-button:active {
+    opacity: 0.5; }
 
 .white-button {
   display: block;
@@ -1653,9 +1660,24 @@ body {
   border-bottom: 1px solid #1d1613;
   font-size: 14px;
   line-height: 21px;
-  color: #9b9997;
+  color: #1d1613;
   background-color: transparent;
   /* -- MOBILE -- */ }
+  .login input[type="email"]::-webkit-input-placeholder,
+  .login input[type="password"]::-webkit-input-placeholder {
+    color: #9b9997; }
+  .login input[type="email"]::-moz-placeholder,
+  .login input[type="password"]::-moz-placeholder {
+    color: #9b9997; }
+  .login input[type="email"]:-ms-input-placeholder,
+  .login input[type="password"]:-ms-input-placeholder {
+    color: #9b9997; }
+  .login input[type="email"]::-ms-input-placeholder,
+  .login input[type="password"]::-ms-input-placeholder {
+    color: #9b9997; }
+  .login input[type="email"]::placeholder,
+  .login input[type="password"]::placeholder {
+    color: #9b9997; }
   @media (max-width: 767px) {
     .login input[type="email"],
     .login input[type="password"] {

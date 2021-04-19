@@ -13,4 +13,16 @@
   background-color: $mobile_nav_bg;
 
   border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active {
+    opacity: $active_opacity;
+  }
+
+  transition: $standart_transition;
 }

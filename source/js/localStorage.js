@@ -26,7 +26,7 @@
   var forms = document.querySelectorAll('form');
 
   forms.forEach(function (form) {
-    var fields = document.querySelectorAll('[data-local-stor]');
+    var fields = form.querySelectorAll('[data-local-stor]');
 
     if (fields) {
       fields.forEach(function (field) {
@@ -35,7 +35,6 @@
       });
 
       form.addEventListener('submit', function () {
-
         fields.forEach(function (field) {
           var itemName = field.dataset.localStor;
           window.storage.saveValue(field, itemName);

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>Document</title>
+  <link rel="preload" href="fonts/poppins/poppins-400.woff" as="font">
+  <link rel="preload" href="fonts/poppins/poppins-400.woff2" as="font">
+  <link rel="preload" href="fonts/poppins/poppins-500.woff" as="font">
+  <link rel="preload" href="fonts/poppins/poppins-500.woff2" as="font">
+  <link rel="preload" href="fonts/poppins/poppins-600.woff" as="font">
+  <link rel="preload" href="fonts/poppins/poppins-600.woff2" as="font">
+
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-400.woff" as="font">
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-400.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-400-italic.woff" as="font">
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-400-italic.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-600.woff" as="font">
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-600.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-700.woff" as="font">
+  <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-700.woff2" as="font">
+
+</head>
+
+<body>
+  @@include("html_components/header.html")
+  <main>
+    <h1 class="visually-hidden">Jellewery-Catalog</h1>
+
+    <!-- CATALOG BANNER -->
+    <section class="catalog-banner banner">
+      <div class="catalog-banner__inner banner__inner">
+        <h2 class="catalog-banner__title banner__title">
+          <span>All jewellery</span>
+          <span>Discover picks of fashion's finest trends in our jewellery catalog</span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section class="catalog">
+      <h2 class="visually-hidden">Product catalog</h2>
+      <div class="container catalog__inner">
+
+        <a href="#" class="catalog__filter-toggle brown-button js-open-window" data-modal-id="filter">Filter</a>
+
+        <!-- Filter -->
+        <div class="catalog__filter filter js-close-window" id="filter">
+          <form action="/" method="get">
+            <ul class="filter__categories">
+              <li>
+                <button class="filter__category-name filter__category-name--active js-accordion-button" type="button">Product</button>
+
+                <ul class="filter__category-content filter__category-content--visible">
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="necklaces"
+                      id="necklaces" checked>
+                    <label class="filter__checkbox-label" for="necklaces">Necklaces</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="chokers" id="chokers" checked>
+                    <label class="filter__checkbox-label" for="chokers">Chokers</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="rings" id="rings">
+                    <label class="filter__checkbox-label" for="rings">Rings</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="earrings" id="earrings"
+                      checked>
+                    <label class="filter__checkbox-label" for="earrings">Earrings</label>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button class="filter__category-name js-accordion-button" type="button">Material</button>
+
+                <ul class="filter__category-content">
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="gold" id="gold" checked>
+                    <label class="filter__checkbox-label" for="gold">Gold</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="silver" id="silver">
+                    <label class="filter__checkbox-label" for="silver">Silver</label>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button class="filter__category-name js-accordion-button" type="button">Collection</button>
+
+                <ul class="filter__category-content">
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="pink_flamingo"
+                      id="pink_flamingo" checked>
+                    <label class="filter__checkbox-label" for="pink_flamingo">Pink flamingo</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden filter__checkbox-input" type="checkbox" name="dreams" id="dreams">
+                    <label class="filter__checkbox-label" for="dreams">Dreams</label>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <button class="filter__category-name filter__category-name--range filter__category-name--active js-accordion-button" type="button">Price</button>
+                <div class="filter__category-content filter__category-content--range filter__category-content--visible">
+                  <div class="filter__range">
+                    <div class="filter__scale">
+                      <div class="filter__bar"></div>
+
+                      <div class="filter__toggle filter__toggle--min"></div>
+                      <div class="filter__toggle filter__toggle--max"></div>
+                    </div>
+
+                    <div class="filter__range-inputs">
+                      <div>
+                        <span>$</span>
+                        <label class="visually-hidden" for="min_price">price from</label>
+                        <input class="min-price-input" type="text" name="min_price" id="min_price" value="55" readonly tabindex="-1">
+                      </div>
+
+                      <div>
+                        <span>$</span>
+                        <label class="visually-hidden" for="max_price">price to</label>
+                        <input class="max-price-input" type="text" name="max_price" id="max_price" value="155" readonly tabindex="-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <button class="brown-button" type="submit">Apply</button>
+            <button class="white-button" type="reset">Clear All</button>
+
+            <button class="filter__close-button js-close-window" type="button">
+              <span class="visually-hidden">Close</span>
+            </button>
+          </form>
+
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="catalog__products">
+          <ul class="catalog__product-list">
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/double-pearl-earrings.webp 1x, img/content/catalog/double-pearl-earrings_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/double-pearl-earrings.jpg"
+                    srcset="img/content/catalog/double-pearl-earrings_2x.jpg 2x" alt="Double pearl earrings ">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Double pearl earrings </span>
+                  <span>$ 115</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/black-choker-gold-bead.webp 1x, img/content/catalog/black-choker-gold-bead_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/black-choker-gold-bead.jpg"
+                    srcset="img/content/catalog/black-choker-gold-bead_2x.jpg 2x" alt="Black choker gold bead">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Choker with gold bead</span>
+                  <span>$ 55</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/gold-layered-necklace.webp 1x, img/content/catalog/gold-layered-necklace_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/gold-layered-necklace.jpg"
+                    srcset="img/content/catalog/gold-layered-necklace_2x.jpg 2x" alt="Gold layered necklace">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Gold layered necklace</span>
+                  <span>$ 155</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/blue-gemstone-pendant.webp 1x, img/content/catalog/blue-gemstone-pendant_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/blue-gemstone-pendant.jpg"
+                    srcset="img/content/catalog/blue-gemstone-pendant_2x.jpg 2x" alt="Blue gemstone pendant">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Blue gemstone pendant</span>
+                  <span>$ 105</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/boho-earrings.webp 1x, img/content/catalog/boho-earrings_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/boho-earrings.jpg" srcset="img/content/catalog/boho-earrings_2x.jpg 2x"
+                    alt="Necklace with amethyst">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Boho earrings</span>
+                  <span>$ 75</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/bird-necklace.webp 1x, img/content/catalog/bird-necklace_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/bird-necklace.jpg" srcset="img/content/catalog/bird-necklace_2x.jpg 2x"
+                    alt="Bird necklace">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Gold bird necklace</span>
+                  <span>$ 135</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/black-leather-choker-necklace.webp 1x, img/content/catalog/black-leather-choker-necklace_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/black-leather-choker-necklace.jpg"
+                    srcset="img/content/catalog/black-leather-choker-necklace_2x.jpg 2x" alt="Black leather choker">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Black leather choker</span>
+                  <span>$ 85</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/purple-gemstone-necklace.webp 1x, img/content/catalog/purple-gemstone-necklace_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/purple-gemstone-necklace.jpg"
+                    srcset="img/content/catalog/purple-gemstone-necklace_2x.jpg 2x" alt="Necklace with amethyst">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Necklace with amethyst</span>
+                  <span>$ 145</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/elephant-earrings.webp 1x, img/content/catalog/elephant-earrings_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/elephant-earrings.jpg"
+                    srcset="img/content/catalog/elephant-earrings_2x.jpg 2x" alt="Elephant earrings">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Elephant earrings</span>
+                  <span>$ 98</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/threader-necklace-closeup.webp 1x, img/content/catalog/threader-necklace-closeup_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/threader-necklace-closeup.jpg"
+                    srcset="img/content/catalog/threader-necklace-closeup_2x.jpg 2x" alt="Black leather choker">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Threader necklace</span>
+                  <span>$ 115</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/origami-crane-necklace.webp 1x, img/content/catalog/origami-crane-necklace_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/origami-crane-necklace.jpg"
+                    srcset="img/content/catalog/origami-crane-necklace_2x.jpg 2x" alt="Origami crane necklace">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Origami crane necklace</span>
+                  <span>$ 105</span>
+                </a>
+              </P>
+            </li>
+
+            <li>
+              <div class="catalog__product-image product__image">
+                <picture>
+                  <!-- .webp -->
+                  <source type="image/webp"
+                    srcset="img/content/catalog/marble-earrings.webp 1x, img/content/catalog/marble-earrings_2x.webp 2x">
+                  <!-- .jpg -->
+                  <img src="img/content/catalog/marble-earrings.jpg"
+                    srcset="img/content/catalog/marble-earrings_2x.jpg 2x" alt="Marble earrings">
+                </picture>
+              </div>
+
+              <P class="catalog__product-title product__title">
+                <a href="/card.html">
+                  <span>Marble earrings</span>
+                  <span>$ 95</span>
+                </a>
+              </P>
+            </li>
+          </ul>
+
+          <div class="catalog__pagination">
+            <a class="catalog__pagination-direction-button catalog__pagination-direction-button--prev"
+              href="#">Previous</a>
+            <ul class="catalog__pagination-pages">
+              <li>
+                <a class="catalog__pagination-page catalog__pagination-page--active" href="#">1</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-page" href="#">2</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-page" href="#">3</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-page" href="#">4</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-page" href="#">5</a>
+              </li>
+            </ul>
+            <a class="catalog__pagination-direction-button catalog__pagination-direction-button--next" href="#">Next</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @@include("html_components/footer.html")
+
+  <!-- Login -->
+  <div class="login modal js-close-window" id="modal-login">
+    <div class="login__inner">
+      <h2>Log In</h2>
+      <div class="login__form">
+        <form action="/" method="post">
+          <label class="visually-hidden" for="email">Input your email</label>
+          <input type="email" name="email" id="email" placeholder="Your E-mail" data-local-stor="email"
+            autocomplete="off" required>
+
+          <label class="visually-hidden" for="pass">Введите пароль</label>
+          <!-- data-pass-pattern - 'lengthReq, bigLettersReq, digitsReq, specialsReq' -->
+          <input type="password" name="pass" id="pass" placeholder="Password" data-pass-pattern="6,1,1,0"
+            autocomplete="off" required>
+          <p class="login__forgot-pass">
+            <a href="#">Forgot your password?</a>
+          </p>
+
+          <button class="brown-button" type="submit">Log in</button>
+        </form>
+
+        <div class=login__signup>
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+
+        <button class="login__close-button close-button js-close-window" type="button"><span
+            class="visually-hidden">close</span></button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

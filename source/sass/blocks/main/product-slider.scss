@@ -4,11 +4,11 @@
 }
 
 .product-slider__container {
-  margin-bottom: 40px;
+  margin-bottom: 57px;
 
   /* -- TABLET -- */
   @media (max-width: $tablet_max_width) {
-    margin-bottom: 25px;
+    margin-bottom: 42px;
   }
 }
 
@@ -17,6 +17,16 @@
 
   width: 29px;
   height: 9px;
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active {
+    opacity: $active_opacity;
+  }
+
+  transition: $standart_transition;
 
   /* -- TABLET -- */
   @media (max-width: $tablet_max_width) {
@@ -83,4 +93,14 @@
   line-height: 21px;
 
   background: none;
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active {
+    opacity: $active_opacity;
+  }
+
+  transition: $standart_transition;
 }

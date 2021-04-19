@@ -1,0 +1,77 @@
+.catalog-banner {
+  margin-bottom: 77px;
+
+  background-image: url("../img/catalog_banner_desktop_1x.jpg");
+
+  /* -- RETINA -- */
+  @media (min-resolution: $retina) {
+    background-image: url("../img/catalog_banner_desktop_1x.jpg");
+  }
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    margin-bottom: 50px;
+
+    background-image: url("../img/catalog_banner_tablet_1x.jpg");
+
+    /* -- RETINA -- */
+    @media (min-resolution: $retina) {
+      background-image: url("../img/catalog_banner_tablet_2x.jpg");
+    }
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    margin-bottom: 40px;
+
+    background-image: url("../img/catalog_banner_mobile_1x.jpg");
+
+    /* -- RETINA -- */
+    @media (min-resolution: $retina) {
+      background-image: url("../img/catalog_banner_mobile_2x.jpg");
+    }
+  }
+}
+
+.catalog-banner__inner {
+  min-height: 260px;
+}
+
+.catalog-banner__title {
+  margin: 0;
+  padding-top: 93px;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    width: 86.21%;
+    padding-top: 80px;
+    margin: 0 auto;
+  }
+}
+
+.catalog-banner__title span:nth-child(2n+1) {
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: normal;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    font-size: 34px;
+    line-height: 130%;
+  }
+}
+
+.catalog-banner__title span:nth-child(2n+2) {
+  display: block;
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    font-size: 22px;
+    line-height: 130%;
+  }
+}

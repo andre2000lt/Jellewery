@@ -1,0 +1,15 @@
+.white-button {
+  display: block;
+
+  padding: 25px 25px;
+
+  font-size: 16px;
+  line-height: 130%;
+  color: $text_color;
+
+  text-align: center;
+
+  background-color: $primary_bg_color;
+
+  border: 1px solid $mobile_nav_bg;
+}

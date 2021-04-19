@@ -129,7 +129,7 @@
     }
 
     field.addEventListener('blur', function () {
-      if (field.value && !field.checkValidity()) {
+      if ((field.value.length !== 0) && (!field.checkValidity())) {
         field.classList.add('invalid-field');
       } else {
         field.classList.remove('invalid-field');

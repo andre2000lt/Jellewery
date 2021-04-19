@@ -1,0 +1,155 @@
+/* -- FAQ -- */
+.faq {
+  margin-bottom: 110px;
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    margin-bottom: 70px;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    margin-bottom: 58px;
+  }
+}
+
+.faq__title {
+  margin-bottom: 48px;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    margin-bottom: 28px;
+  }
+}
+
+.faq__list {
+  width: 83%;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+  border: 1px solid $mobile_nav_bg;
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    width: 100%;
+  }
+}
+
+.faq__list li {
+  padding: 40px 50px 44px 38px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $mobile_nav_bg;
+  }
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    padding: 40px 50px 46px 45px;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    padding: 12px 25px 19px 20px;
+
+    &:not(:first-child) {
+      padding-top: 19px;
+    }
+  }
+}
+
+.faq__question {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  padding-right: 40px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: $text_color;
+
+  text-align: left;
+
+  border: none;
+  background-color: $primary_bg_color;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7px;
+    z-index: 1;
+
+    width: 17px;
+    height: 10px;
+
+    background: url("../img/accordion-arrow-down.svg") no-repeat;
+    background-size: cover;
+  }
+
+  &--active {
+    &::after {
+      background-image: url("../img/accordion-arrow-up.svg");
+    }
+  }
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active {
+    opacity: $active_opacity;
+  }
+
+  transition: $standart_transition;
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    &::after {
+      width: 23px;
+      height: 12px;
+    }
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    padding-right: 30px;
+
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.faq__answer {
+  display: none;
+
+  width: 60%;
+  padding: 8px 0 0 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+
+  &--visible {
+    display: block;
+  }
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    width: 92%;
+    padding: 25px 0 0 2px;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    width: 85%;
+    padding: 15px 0 0 2px;
+
+    font-size: 14px;
+    line-height: 140%;
+  }
+}

@@ -121,7 +121,9 @@
   // При клике на любую кнопку с атрибутом data-modal-id -
   //  открываем окно с id указанным в data атрибуте кнопки
   openWindowButtons.forEach(function (elem) {
-    elem.addEventListener('click', function () {
+    elem.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
       var modalId = '#' + elem.dataset.modalId;
       var modal = document.querySelector(modalId);
 

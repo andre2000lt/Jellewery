@@ -4,9 +4,32 @@
   height: 14px;
 
   background-image: url("../img/close_button.svg");
+  background-size: cover;
   background-color: transparent;
 
   border: none;
 
   cursor: pointer;
+
+  &:hover {
+    opacity: $hover_opacity;
+  }
+
+  &:active {
+    opacity: $active_opacity;
+  }
+
+  transition: $standart_transition;
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    width: 14px;
+    height: 14px;
+  }
 }

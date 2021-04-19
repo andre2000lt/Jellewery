@@ -42,6 +42,7 @@
   "editorconfig-cli": [
     "source/*.html",
     "source/js/**/*.js",
+    "!source/js/product-slider.js",
     "source/img/**/*.svg",
     "source/sass/**/*.{sass,scss}"
   ],
@@ -49,6 +50,7 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^4.1.1",
+    "gulp-concat": "^2.6.1"
   }
 }

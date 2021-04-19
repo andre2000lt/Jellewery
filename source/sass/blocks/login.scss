@@ -1,15 +1,33 @@
 /* -- LOG IN -- */
+
 .login__inner {
   position: relative;
 
   width: 430px;
-  height: 586px;
+  min-height: 586px;
 
   padding: 190px 45px 45px 45px;
 
   background: #f0eae4 url("../img/login_bg_1x.jpg") no-repeat left top;
   background-size: 430px 138px;
   box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
+
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    width: 442px;
+    padding: 190px 50px 45px 50px;
+
+    background-size: 442px 138px;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    min-height: 470px;
+    width: 270px;
+    padding: 120px 15px 45px 15px;
+
+    background-size: 270px 84px;
+  }
 }
 
 .login h2 {
@@ -22,6 +40,13 @@
   line-height: 130%;
 
   text-align: center;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    margin-bottom: 22px;
+
+    font-size: 24px;
+  }
 }
 
 .login input[type="email"],
@@ -37,14 +62,34 @@
   color: $hint_color;
 
   background-color: transparent;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    padding: 7px 0;
+  }
 }
 
 .login input[type="email"] {
   margin-bottom: 35px;
+  box-shadow: none;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    margin-bottom: 24px;
+  }
+}
+
+.login input[type="email"].invalid-field {
+  box-shadow: 0 0 2px 2px red;
 }
 
 .login input[type="password"] {
-  margin-bottom: 8px;
+  box-shadow: none;
+  margin-bottom: 4px;
+}
+
+.login input[type="password"].invalid-field {
+  box-shadow: 0 0 2px 2px red;
 }
 
 .login__forgot-pass {
@@ -52,6 +97,11 @@
   margin-bottom: 42px;
 
   text-align: right;
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    margin-bottom: 34px;
+  }
 }
 
 .login__forgot-pass a {
@@ -113,4 +163,14 @@
   position: absolute;
   right: 20px;
   top: 20px;
+
+  &--nojs {
+    display: none;
+  }
+
+  /* -- MOBILE -- */
+  @media (max-width: $mobile_max_width) {
+    right: 15px;
+    top: 15px;
+  }
 }

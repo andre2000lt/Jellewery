@@ -24,6 +24,34 @@
   <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-700.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/cormorant_garamond/cormorant-garamond-700.woff2" as="font" crossorigin="anonymous">
 
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        /* Mobile layout by default */
+        background-image: url("img/models/320_catalog.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+      }
+
+      /* tablet */
+      @media (min-width: 768px) {
+        html {
+          /* Desktop layout */
+          background-image: url("img/models/768_catalog.jpg");
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 1366px) {
+        html {
+          /* Desktop layout */
+          background-image: url("img/models/1366_catalog.jpg");
+        }
+      }
+    </style>
+    <link href="pixel-glass/styles.css" rel="stylesheet">
+    <script src="pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
 </head>
 
 <body>

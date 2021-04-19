@@ -1013,6 +1013,10 @@ body {
     bottom: 0;
     right: 0;
     min-height: 300px; }
+  @media (max-width: 1100px) {
+    .blog__post {
+      padding-left: 50px;
+      padding-right: 50px; } }
   @media (max-width: 1023px) {
     .blog__post {
       min-height: 300px;

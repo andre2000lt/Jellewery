@@ -91,6 +91,10 @@ body {
   -webkit-box-shadow: 0 0 2px 2px red;
           box-shadow: 0 0 2px 2px red; }
 
+.modal-opened {
+  height: 100vh;
+  overflow: hidden; }
+
 /* -- CONTAINER -- */
 .container {
   max-width: 1366px;

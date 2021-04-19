@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  var body = document.querySelector('body');
   var burger = document.querySelector('.burger');
   var headerNav = document.querySelector('.header__nav');
   var logo = document.querySelector('.header__logo');
@@ -27,6 +28,7 @@
         headerTop.classList.toggle('header__top--brown');
       }
 
+      body.classList.toggle('modal-opened');
     });
   }
 })();

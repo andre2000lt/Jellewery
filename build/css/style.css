@@ -390,7 +390,9 @@ body {
   @media (max-width: 767px) {
     .header__logo svg {
       width: 52px;
-      height: 52px; } }
+      height: 52px;
+      -o-object-fit: cover;
+         object-fit: cover; } }
 
 .header__cart {
   position: absolute;

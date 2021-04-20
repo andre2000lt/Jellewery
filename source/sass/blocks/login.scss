@@ -63,6 +63,8 @@
 
   background-color: transparent;
 
+  border-radius: 100%;
+
   &::placeholder {
     color: $hint_color;
   }

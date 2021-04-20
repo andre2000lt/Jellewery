@@ -125,7 +125,7 @@ gulp.task('scssToCss', function () {
 // Сжатие картинок
 gulp.task('images', function () {
     return gulp.src([
-        'source/img/**/*.{png,jpg,svg,webp}',
+        'source/img/**/*.{png,jpg,svg}',
         //'!source/img/models/**/*.*'
     ])
         .pipe(imagemin([

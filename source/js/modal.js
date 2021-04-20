@@ -2,10 +2,8 @@
 
 (function () {
   var openWindowButtons = document.querySelectorAll('[data-modal-id]');
-  // var modals = document.querySelectorAll('.modal');
   var body = document.querySelector('body');
   var html = document.querySelector('html');
-  // var scrollPosition = 0;
   var onModalPressTab;
   var onModalPressEsc;
 

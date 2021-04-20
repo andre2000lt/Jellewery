@@ -60,6 +60,12 @@ gulp.task('concatVendorJs', function() {
     .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('concatCss', function() {
+  return gulp.src(['build/css/normalize.css', 'build/css/swiper-bundle.min.css', 'build/css/style.css'])
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('build/css'));
+});
+
 // Удалкние папки build
 gulp.task('clean', function () {
     return del('build');
@@ -154,7 +160,7 @@ gulp.task('webp', function () {
         .pipe(gulp.dest('source/img/content'));
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'html', 'scssToCss', 'images', 'sprite', 'concatMainJs', 'concatVendorJs'));
+gulp.task('build', gulp.series('clean', 'copy', 'html', 'scssToCss', 'concatCss', 'images', 'sprite', 'concatMainJs', 'concatVendorJs'));
 gulp.task('start', gulp.series('build', 'server'));
 
 

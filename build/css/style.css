@@ -2932,15 +2932,21 @@ td.add-to-cart__product-count {
 
 .add-to-cart__close-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  right: 12px;
+  top: 12px;
   z-index: 1;
+  /* -- TABLET -- */
   /* -- MOBILE -- */ }
   .add-to-cart__close-button--nojs {
     display: none; }
+  @media (max-width: 1023px) {
+    .add-to-cart__close-button {
+      right: 12px;
+      top: 12px;
+      background-image: url("../img/close_button.svg"); } }
   @media (max-width: 767px) {
     .add-to-cart__close-button {
-      top: 15px;
-      right: 15px; } }
+      top: 8px;
+      right: 8px; } }
 
 /*# sourceMappingURL=style.css.map */

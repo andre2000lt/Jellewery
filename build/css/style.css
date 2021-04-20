@@ -187,11 +187,12 @@ body {
 
 /* -- CLOSE-BUTTON -- */
 .close-button {
-  width: 14px;
-  height: 14px;
+  width: 30px;
+  height: 30px;
   background-image: url("../img/close_button.svg");
-  background-size: cover;
+  background-position: center center;
   background-color: transparent;
+  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   -webkit-transition: 0.3s;
@@ -204,12 +205,14 @@ body {
     opacity: 0.5; }
   @media (max-width: 1023px) {
     .close-button {
-      width: 20px;
-      height: 20px; } }
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/close_button_big.svg"); } }
   @media (max-width: 767px) {
     .close-button {
-      width: 14px;
-      height: 14px; } }
+      width: 30px;
+      height: 30px;
+      background-image: url("../img/close_button.svg"); } }
 
 .section-title {
   margin: 0;
@@ -1758,15 +1761,20 @@ body {
 
 .login__close-button {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 12px;
+  top: 12px;
+  /* -- TABLET -- */
   /* -- MOBILE -- */ }
   .login__close-button--nojs {
     display: none; }
+  @media (max-width: 1023px) {
+    .login__close-button {
+      right: 10px;
+      top: 10px; } }
   @media (max-width: 767px) {
     .login__close-button {
-      right: 15px;
-      top: 15px; } }
+      right: 8px;
+      top: 8px; } }
 
 .catalog-banner {
   margin-bottom: 77px;

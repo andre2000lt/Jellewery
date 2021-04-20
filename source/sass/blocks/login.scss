@@ -165,16 +165,22 @@
 
 .login__close-button {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 12px;
+  top: 12px;
 
   &--nojs {
     display: none;
   }
 
+  /* -- TABLET -- */
+  @media (max-width: $tablet_max_width) {
+    right: 10px;
+    top: 10px;
+  }
+
   /* -- MOBILE -- */
   @media (max-width: $mobile_max_width) {
-    right: 15px;
-    top: 15px;
+    right: 8px;
+    top: 8px;
   }
 }

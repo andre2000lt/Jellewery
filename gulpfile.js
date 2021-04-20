@@ -81,7 +81,7 @@ gulp.task('server', function () {
         ui: false
     });
 
-    gulp.watch(path.watch.scss, gulp.series('scssToCss'));
+    gulp.watch(path.watch.scss, gulp.series('scssToCss', 'concatCss'));
     // gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'refresh'));
     gulp.watch(path.watch.html, gulp.series('html', 'refresh'));
 });

@@ -214,7 +214,7 @@ td.add-to-cart__product-count {
   transition: $standart_transition;
 }
 
-.add-to-cart__product-count input[type="text"] {
+.add-to-cart__product-count input[type="number"] {
   display: block;
 
   width: 100%;
@@ -227,6 +227,14 @@ td.add-to-cart__product-count {
   text-align: right;
 
   border: none;
+
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 
   /* -- MOBILE -- */
   @media (max-width: $mobile_max_width) {

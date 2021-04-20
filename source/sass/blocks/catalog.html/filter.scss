@@ -416,6 +416,14 @@
 
   height: 20px;
 
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
   /* -- TABLET -- */
   @media (max-width: $tablet_max_width) {
     font-size: 16px;

@@ -1182,6 +1182,9 @@ body {
       font-size: 14px;
       line-height: 140%; } }
 
+.faq__answer p {
+  margin: 0; }
+
 /* -- GALLERY -- */
 .gallery {
   margin-bottom: 130px;
@@ -1665,6 +1668,7 @@ body {
   line-height: 21px;
   color: #1d1613;
   background-color: transparent;
+  border-radius: 100%;
   /* -- MOBILE -- */ }
   .login input[type="email"]::-webkit-input-placeholder,
   .login input[type="password"]::-webkit-input-placeholder {

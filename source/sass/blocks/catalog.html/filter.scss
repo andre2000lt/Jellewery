@@ -260,7 +260,7 @@
   }
 }
 
-.filter__checkbox-label {
+.filter__checkbox label {
   position: relative;
 
   padding-left: 25px;
@@ -283,16 +283,6 @@
     border: 1px solid $mobile_nav_bg;
   }
 
-  .filter__checkbox-input:checked + & {
-    &::before {
-      background-color: $mobile_nav_bg;
-    }
-  }
-
-  .filter__checkbox-input:focus + & {
-    outline: solid $mobile_nav_bg;
-  }
-
   /* -- TABLET -- */
   @media (max-width: $tablet_max_width) {
     font-size: 16px;
@@ -303,6 +293,16 @@
       height: 18px;
     }
   }
+}
+
+.filter__checkbox input:checked + label {
+  &::before {
+    background-color: $mobile_nav_bg;
+  }
+}
+
+.filter__checkbox input:focus + label {
+  outline: solid $mobile_nav_bg;
 }
 
 .filter__scale {

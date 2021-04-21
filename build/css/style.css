@@ -2536,14 +2536,14 @@ a.catalog__pagination-page--active {
     .filter__category-content li:not(:last-child) {
       margin-bottom: 17px; } }
 
-.filter__checkbox-label {
+.filter__checkbox label {
   position: relative;
   padding-left: 25px;
   font-size: 14px;
   line-height: 130%;
   cursor: pointer;
   /* -- TABLET -- */ }
-  .filter__checkbox-label::before {
+  .filter__checkbox label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -2552,17 +2552,19 @@ a.catalog__pagination-page--active {
     width: 15px;
     height: 15px;
     border: 1px solid #a87b62; }
-  .filter__checkbox-input:checked + .filter__checkbox-label::before {
-    background-color: #a87b62; }
-  .filter__checkbox-input:focus + .filter__checkbox-label {
-    outline: solid #a87b62; }
   @media (max-width: 1023px) {
-    .filter__checkbox-label {
+    .filter__checkbox label {
       font-size: 16px;
       padding-left: 30px; }
-      .filter__checkbox-label::before {
+      .filter__checkbox label::before {
         width: 18px;
         height: 18px; } }
+
+.filter__checkbox input:checked + label::before {
+  background-color: #a87b62; }
+
+.filter__checkbox input:focus + label {
+  outline: solid #a87b62; }
 
 .filter__scale {
   position: relative;

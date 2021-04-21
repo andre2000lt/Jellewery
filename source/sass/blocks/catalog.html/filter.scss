@@ -305,10 +305,6 @@
   }
 }
 
-// .filter__range {
-//   margin-bottom: 20px;
-// }
-
 .filter__scale {
   position: relative;
 
@@ -438,21 +434,21 @@
 
   display: flex;
 
-  &:nth-child(1) {
+  &:nth-child(2n+1) {
     left: 18%;
   }
 
-  &:nth-child(2) {
+  &:nth-child(2n+2) {
     left: 70%;
   }
 
   /* -- TABLET -- */
   @media (max-width: $tablet_max_width) {
-    &:nth-child(1) {
+    &:nth-child(2n+1) {
       left: 10%;
     }
 
-    &:nth-child(2) {
+    &:nth-child(2n+2) {
       left: 59%;
     }
   }

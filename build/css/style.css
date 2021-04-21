@@ -450,10 +450,6 @@ body {
 .nowrap {
   white-space: nowrap; }
 
-.invalid-field {
-  -webkit-box-shadow: 0 0 2px 2px red;
-          box-shadow: 0 0 2px 2px red; }
-
 .modal-opened {
   height: 100vh;
   overflow: hidden; }
@@ -2031,7 +2027,7 @@ body {
   line-height: 21px;
   color: #1d1613;
   background-color: transparent;
-  border-radius: 100%;
+  border-radius: 0;
   /* -- MOBILE -- */ }
   .login input[type="email"]::-webkit-input-placeholder,
   .login input[type="password"]::-webkit-input-placeholder {
@@ -2665,14 +2661,14 @@ a.catalog__pagination-page--active {
   display: flex;
   /* -- TABLET -- */
   /* -- MOBILE -- */ }
-  .filter__range-inputs div:nth-child(1) {
+  .filter__range-inputs div:nth-child(2n+1) {
     left: 18%; }
-  .filter__range-inputs div:nth-child(2) {
+  .filter__range-inputs div:nth-child(2n+2) {
     left: 70%; }
   @media (max-width: 1023px) {
-    .filter__range-inputs div:nth-child(1) {
+    .filter__range-inputs div:nth-child(2n+1) {
       left: 10%; }
-    .filter__range-inputs div:nth-child(2) {
+    .filter__range-inputs div:nth-child(2n+2) {
       left: 59%; } }
   @media (max-width: 767px) {
     .filter__range-inputs div:nth-child(1) {
